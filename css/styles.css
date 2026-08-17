@@ -220,6 +220,7 @@ button{ font-family: inherit; }
   background-color: #b6e0bc;
 }
 .primary-nav.is-open .nav-contact{ background-color: #b6e0bc; }
+.primary-nav.is-open ul{ background-color: #b6e0bc; }
 .primary-nav ul{ display:flex; flex-direction:column; gap: 1.4rem; flex:1; justify-content:center; }
 .primary-nav a{
   text-decoration:none;
@@ -274,6 +275,7 @@ body.nav-open{ overflow:hidden; }
   }
   .primary-nav.is-open{ background-color: initial; background-image: none; }
   .primary-nav.is-open .nav-contact{ background-color: initial; }
+  .primary-nav.is-open ul{ background-color: initial; }
   .primary-nav ul{ flex-direction:row; align-items:center; gap: 2rem; }
   .primary-nav a{ font-family: var(--f-body); font-size: var(--step--1); color: var(--espresso); font-weight:600; text-transform:uppercase; letter-spacing:.06em; }
   .primary-nav a .num{ display:none; }
