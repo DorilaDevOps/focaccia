@@ -207,25 +207,22 @@ button{ font-family: inherit; }
 .primary-nav{
   position: fixed;
   inset: 0 0 0 30%;
-  background: linear-gradient(135deg, var(--espresso) 0%, #3D2A1E 50%, var(--espresso) 100%);
-  color: var(--crema-alta);
+  background: var(--crema-alta);
+  color: var(--espresso);
   display:flex;
   flex-direction:column;
-  justify-content:center;
-  padding: 2rem var(--gutter);
+  padding: 5rem var(--gutter) 2rem;
   transform: translateX(100%);
   transition: transform var(--dur-2) var(--ease);
   z-index: 105;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 .primary-nav.is-open{ transform: translateX(0); }
-.primary-nav ul{ display:flex; flex-direction:column; gap: 1.4rem; }
+.primary-nav ul{ display:flex; flex-direction:column; gap: 1.4rem; flex:1; justify-content:center; }
 .primary-nav a{
   text-decoration:none;
   font-family: var(--f-display);
   font-size: var(--step-2);
-  color: #FFFFFF;
+  color: var(--espresso);
   display:inline-flex;
   align-items:baseline;
   gap:.6rem;
@@ -233,25 +230,22 @@ button{ font-family: inherit; }
   border-radius: var(--radius-s);
   transition: background var(--dur-1) var(--ease), color var(--dur-1) var(--ease);
 }
-.primary-nav a:hover{ background: #DEB06A; color: var(--espresso); }
+.primary-nav a:hover{ background: var(--oro-masa); color: var(--espresso); }
 .primary-nav a .num{
   font-family: var(--f-mono);
   font-size: .55em;
-  color: var(--oro-masa);
+  color: var(--rojo-italia);
 }
 .primary-nav .nav-contact{
-  margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(251,243,231,.2);
+  border-top: 1px solid var(--linea);
   font-family: var(--f-mono);
   font-size: var(--step--1);
-  color: rgba(251,243,231,.85);
+  color: var(--espresso-70);
   display:flex; flex-direction:column; gap:.6rem;
-  background: rgba(251,243,231,.08);
-  padding: 1.2rem;
-  border-radius: var(--radius-m);
+  padding: 1.5rem 0 0;
 }
-.primary-nav .nav-contact a{ font-family: var(--f-mono); font-size: 1em; color: var(--crema-alta); font-weight:600; }
+.primary-nav .nav-contact a{ font-family: var(--f-mono); font-size: 1em; color: var(--rojo-italia); font-weight:600; }
 
 .nav-scrim{
   position: fixed; inset:0;
