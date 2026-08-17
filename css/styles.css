@@ -165,7 +165,7 @@ button{ font-family: inherit; }
   text-decoration:none;
   color: var(--espresso);
 }
-.brand img{ height: 44px; width:auto; }
+.brand img{ height: 52px; width:auto; }
 .brand-text{
   font-family: var(--f-display);
   font-weight: 700;
@@ -216,22 +216,24 @@ button{ font-family: inherit; }
   transform: translateX(100%);
   transition: transform var(--dur-2) var(--ease);
   z-index: 105;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 .primary-nav.is-open{ transform: translateX(0); }
-.primary-nav ul{ display:flex; flex-direction:column; gap: 1.1rem; }
+.primary-nav ul{ display:flex; flex-direction:column; gap: 1.4rem; }
 .primary-nav a{
   text-decoration:none;
   font-family: var(--f-display);
   font-size: var(--step-2);
-  color: var(--crema-alta);
+  color: #FFFFFF;
   display:inline-flex;
   align-items:baseline;
   gap:.6rem;
   padding: .4rem .6rem;
   border-radius: var(--radius-s);
-  transition: background var(--dur-1) var(--ease);
+  transition: background var(--dur-1) var(--ease), color var(--dur-1) var(--ease);
 }
-.primary-nav a:hover{ background: rgba(251,243,231,.1); }
+.primary-nav a:hover{ background: #DEB06A; color: var(--espresso); }
 .primary-nav a .num{
   font-family: var(--f-mono);
   font-size: .55em;
@@ -245,7 +247,7 @@ button{ font-family: inherit; }
   font-size: var(--step--1);
   color: rgba(251,243,231,.85);
   display:flex; flex-direction:column; gap:.6rem;
-  background: rgba(251,243,231,.04);
+  background: rgba(251,243,231,.08);
   padding: 1.2rem;
   border-radius: var(--radius-m);
 }
@@ -570,8 +572,9 @@ body.nav-open{ overflow:hidden; }
   max-width: 60ch;
 }
 .menu-item{ transition: background .2s var(--ease); border-radius: 4px; margin-inline: -.4rem; padding-inline: .4rem; }
-.menu-item:hover{ background: rgba(251,243,231,.15); }
-.section:not(.on-espresso) .menu-item:hover{ background: var(--crema-alta); }
+.menu-item:hover{ background: #DEB06A; }
+.menu-item:hover .menu-item-name{ color: var(--espresso); }
+.section:not(.on-espresso) .menu-item:hover{ background: #DEB06A; }
 
 .menu-panel-sub{ margin-bottom: 1.4rem; }
 .eyebrow-oro{ color: var(--oro-masa); }
@@ -895,6 +898,9 @@ body.nav-open{ overflow:hidden; }
 /* =========================================================
    Mobile-specific enhancements
    ========================================================= */
+@media (max-width: 899px){
+  .site-header.is-scrolled{ box-shadow: none; }
+}
 @media (max-width: 480px){
   .hero-meta{ gap: 1.2rem; }
   .hero-meta div strong{ font-size: var(--step-0); }
