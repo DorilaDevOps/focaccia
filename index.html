@@ -14,7 +14,9 @@
 <meta property="og:type" content="restaurant.menu">
 <meta property="og:title" content="FOCACCIA — Bar de Pizzas en Punta Colorada">
 <meta property="og:description" content="Pizzas de horno a leña, focaccia, fainá, cazuelas, postres y tragos. Águila Mora esq. Av. de las Garzas, Punta Colorada, Maldonado.">
-<meta property="og:image" content="assets/img/hero-oven.webp">
+<meta property="og:image" content="https://www.focacciapuntacolorada.uy/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="es_UY">
 <meta property="og:url" content="https://www.focacciapuntacolorada.uy/">
 <meta property="og:site_name" content="FOCACCIA">
@@ -23,7 +25,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="FOCACCIA — Bar de Pizzas en Punta Colorada">
 <meta name="twitter:description" content="Pizzas de horno a leña, focaccia, fainá, cazuelas, postres y tragos en Punta Colorada, Maldonado.">
-<meta name="twitter:image" content="assets/img/hero-oven.webp">
+<meta name="twitter:image" content="https://www.focacciapuntacolorada.uy/assets/img/og-image.png">
 
 <meta name="theme-color" content="#2B1D14">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
@@ -40,7 +42,7 @@
   "@context": "https://schema.org",
   "@type": "Restaurant",
   "name": "FOCACCIA — bar de pizzas",
-  "image": "assets/img/hero-oven.webp",
+  "image": "https://www.focacciapuntacolorada.uy/assets/img/hero-oven.webp",
   "servesCuisine": ["Pizza", "Italiana", "Focaccia"],
   "telephone": "+59891537001",
   "address": {
@@ -248,7 +250,7 @@
 
       <!-- SÁNDWICHES -->
       <div class="menu-panel" id="panel-sandwiches" role="tabpanel" aria-labelledby="tab-sandwiches" tabindex="0" hidden>
-        <p class="section-sub" style="margin-bottom:1.4rem;">En pan tipo bata.</p>
+        <p class="section-sub menu-panel-sub">En pan tipo bata.</p>
         <ul class="menu-list">
           <li class="menu-item"><span class="menu-item-name">Roast Beef</span><p class="menu-item-desc">Verdes, entrecot asado, pepinillos, huevo duro, tomate, alcaparras, lactonesa.</p></li>
           <li class="menu-item"><span class="menu-item-name">Rústico</span><p class="menu-item-desc">Verduras asadas, queso fundido, rúcula.</p></li>
@@ -259,7 +261,7 @@
 
       <!-- CAZUELAS -->
       <div class="menu-panel" id="panel-cazuelas" role="tabpanel" aria-labelledby="tab-cazuelas" tabindex="0" hidden>
-        <p class="section-sub" style="margin-bottom:1.4rem;">Acompañadas de pan del día.</p>
+        <p class="section-sub menu-panel-sub">Acompañadas de pan del día.</p>
         <ul class="menu-list">
           <li class="menu-item"><span class="menu-item-name">Provolone de la Casa</span><p class="menu-item-desc">Queso provolone fundido con coulis de frutos rojos.</p></li>
           <li class="menu-item"><span class="menu-item-name">Pisto Manchego</span><p class="menu-item-desc">Verduras horneadas, salsa de tomate, huevos estrellados.</p></li>
@@ -281,7 +283,7 @@
   </section>
 
   <svg class="torn-divider torn-verde" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0,0 L1200,0 L1200,22 C1150,34 1120,10 1080,20 C1040,30 1010,8 970,18 C930,28 900,6 860,16 C820,26 790,4 750,14 C710,24 680,2 640,12 C600,22 570,0 530,10 C490,20 460,-2 420,8 C380,18 350,-4 310,6 C270,16 240,-6 200,4 C160,14 130,-8 90,2 C60,10 30,0 0,8 Z" fill="#1F3F2A"/>
+    <path d="M0,0 L1200,0 L1200,22 C1150,34 1120,10 1080,20 C1040,30 1010,8 970,18 C930,28 900,6 860,16 C820,26 790,4 750,14 C710,24 680,2 640,12 C600,22 570,0 530,10 C490,20 460,-2 420,8 C380,18 350,-4 310,6 C270,16 240,-6 200,4 C160,14 130,-8 90,2 C60,10 30,0 0,8 Z"/>
   </svg>
 
   <!-- ============ TRAGOS ============ -->
@@ -320,29 +322,60 @@
       </div>
       <div class="gallery-grid reveal" id="galleryGrid">
         <a href="assets/img/gallery-1.webp" data-caption="Preparando la salsa a fuego lento">
-          <img src="assets/img/gallery-1.webp" alt="Cocinero terminando una pizza con una cuchara de salsa, humo saliendo del horno" width="610" height="808" loading="lazy">
+          <img data-src="assets/img/gallery-1.webp" alt="Cocinero terminando una pizza con una cuchara de salsa, humo saliendo del horno" width="610" height="808" loading="lazy">
+          <span class="gallery-caption">Salsa a fuego lento</span>
         </a>
         <a href="assets/img/gallery-2.webp" data-caption="Focaccia del día recién salida del horno">
-          <img src="assets/img/gallery-2.webp" alt="Focaccia con tomates cherry y albahaca sobre tabla de madera" width="627" height="809" loading="lazy">
+          <img data-src="assets/img/gallery-2.webp" alt="Focaccia con tomates cherry y albahaca sobre tabla de madera" width="627" height="809" loading="lazy">
+          <span class="gallery-caption">Focaccia del día</span>
         </a>
         <a href="assets/img/menu-pizza-1.webp" data-caption="Para compartir en el mostrador">
-          <img src="assets/img/menu-pizza-1.webp" alt="Pizza entera servida sobre plato blanco" width="641" height="803" loading="lazy">
+          <img data-src="assets/img/menu-pizza-1.webp" alt="Pizza entera servida sobre plato blanco" width="641" height="803" loading="lazy">
+          <span class="gallery-caption">Para compartir</span>
+        </a>
+        <a href="assets/img/dough.webp" data-caption="Manos trabajando la masa fresca">
+          <img data-src="assets/img/dough.webp" alt="Manos estirando masa de focaccia recién fermentada" width="429" height="742" loading="lazy">
+          <span class="gallery-caption">Masa fresca</span>
         </a>
         <a href="assets/img/ambience-night.webp" data-caption="Las mesas de afuera, de noche">
-          <img src="assets/img/ambience-night.webp" alt="Mesas al aire libre iluminadas por la noche, con comensales conversando" width="559" height="783" loading="lazy">
-        </a>
-        <a href="assets/img/postre.webp" data-caption="Torta vasca con dulce de tomate">
-          <img src="assets/img/postre.webp" alt="Torta vasca con dulce de tomate en plato oscuro" width="349" height="500" loading="lazy">
+          <img data-src="assets/img/ambience-night.webp" alt="Mesas al aire libre iluminadas por la noche, con comensales conversando" width="559" height="783" loading="lazy">
+          <span class="gallery-caption">Ambiente nocturno</span>
         </a>
         <a href="assets/img/gallery-3.webp" data-caption="Nuestras aceitunas y tapenade">
-          <img src="assets/img/gallery-3.webp" alt="Detalle de pizza con hongos y aceitunas negras sobre base crocante" width="652" height="805" loading="lazy">
+          <img data-src="assets/img/gallery-3.webp" alt="Detalle de pizza con hongos y aceitunas negras sobre base crocante" width="652" height="805" loading="lazy">
+          <span class="gallery-caption">Aceitunas y tapenade</span>
+        </a>
+        <a href="assets/img/gallery-4.webp" data-caption="Detalle de la preparación">
+          <img data-src="assets/img/gallery-4.webp" alt="Detalle de ingredientes frescos sobre la mesa de preparación" width="600" height="800" loading="lazy">
+          <span class="gallery-caption">Ingredientes frescos</span>
+        </a>
+        <a href="assets/img/drinks.webp" data-caption="La barra de tragos lista para servir">
+          <img data-src="assets/img/drinks.webp" alt="Tragos y bebidas servidos sobre una mesa de madera con velas" width="351" height="554" loading="lazy">
+          <span class="gallery-caption">La barra de tragos</span>
+        </a>
+        <a href="assets/img/gallery-5.webp" data-caption="Un momento en la cocina">
+          <img data-src="assets/img/gallery-5.webp" alt="Momento de la cocina capturando el arte de la pizza artesanal" width="600" height="800" loading="lazy">
+          <span class="gallery-caption">En la cocina</span>
+        </a>
+        <a href="assets/img/postre.webp" data-caption="Torta vasca con dulce de tomate">
+          <img data-src="assets/img/postre.webp" alt="Torta vasca con dulce de tomate en plato oscuro" width="349" height="500" loading="lazy">
+          <span class="gallery-caption">Torta vasca</span>
+        </a>
+        <a href="assets/img/gallery-6.webp" data-caption="El horno de barro, nuestra pieza central">
+          <img data-src="assets/img/gallery-6.webp" alt="Horno de barro a leña con fuego encendido, pieza central del local" width="600" height="800" loading="lazy">
+          <span class="gallery-caption">El horno de barro</span>
+        </a>
+        <a href="assets/img/staff.webp" data-caption="Nuestro equipo en acción">
+          <img data-src="assets/img/staff.webp" alt="Integrante del equipo de Focaccia preparando el horno dentro del local" width="610" height="837" loading="lazy">
+          <span class="gallery-caption">Nuestro equipo</span>
+        </a>
+        <a href="assets/img/menu-pizza-2.webp" data-caption="Pizza con albahaca y tomates cherry">
+          <img data-src="assets/img/menu-pizza-2.webp" alt="Primer plano de una pizza con albahaca fresca y tomates cherry" width="604" height="778" loading="lazy">
+          <span class="gallery-caption">Albahaca y cherry</span>
         </a>
       </div>
     </div>
   </section>
-
-
-
 
 
   <!-- ============ VISITANOS / CONTACTO ============ -->
@@ -441,10 +474,22 @@
 </a>
 
 <!-- Lightbox de galería -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada" hidden>
-  <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar imagen">✕</button>
-  <img id="lightboxImg" src="" alt="">
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galería de imágenes" hidden>
+  <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar galería">✕</button>
+  <button class="lightbox-prev" id="lightboxPrev" aria-label="Imagen anterior">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="lightbox-next" id="lightboxNext" aria-label="Imagen siguiente">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <div class="lightbox-stage" id="lightboxStage">
+    <img id="lightboxImg" src="" alt="" class="lightbox-img">
+    <div class="lightbox-spinner" id="lightboxSpinner">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" stroke-dasharray="31.4 31.4" stroke-linecap="round"/></svg>
+    </div>
+  </div>
   <p class="lightbox-caption" id="lightboxCaption"></p>
+  <span class="lightbox-counter" id="lightboxCounter"></span>
 </div>
 
 <script src="js/script.js"></script>

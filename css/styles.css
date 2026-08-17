@@ -389,6 +389,7 @@ body.nav-open{ overflow:hidden; }
 .torn-crema  path{ fill: var(--crema); }
 .torn-alta   path{ fill: var(--crema-alta); }
 .torn-esp    path{ fill: var(--espresso); }
+.torn-verde  path{ fill: var(--verde-oscuro); }
 
 /* =========================================================
    Secciones genéricas
@@ -412,7 +413,9 @@ body.nav-open{ overflow:hidden; }
 .section.on-espresso{ background: var(--espresso); color: var(--crema-alta); }
 .section.on-espresso .section-sub{ color: rgba(251,243,231,.72); }
 .section.on-espresso .menu-item-desc{ color: rgba(251,243,231,.82); }
+.section.on-espresso .menu-group-title{ color: #D4835E; }
 .section.on-verde{ background: var(--verde-oscuro); color: var(--crema-alta); }
+.section.on-verde .eyebrow-oro{ color: #DEB06A; }
 
 /* =========================================================
    Nosotros
@@ -569,15 +572,15 @@ body.nav-open{ overflow:hidden; }
   margin-top: 3rem;
   display:grid;
   gap: 1rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 .menu-side-figure img{
-  width:100%; height:180px; object-fit:cover;
+  width:100%; height:200px; object-fit:cover;
   border-radius: var(--radius-m);
 }
-@media (max-width: 699px){
-  .menu-side-figure{ grid-template-columns: 1fr; }
-  .menu-side-figure img{ height: 200px; }
+@media (min-width: 700px){
+  .menu-side-figure{ grid-template-columns: 1fr 1fr; }
+  .menu-side-figure img{ height: 180px; }
 }
 
 /* =========================================================
@@ -679,12 +682,12 @@ body.nav-open{ overflow:hidden; }
 @keyframes spin{ to{ transform: rotate(360deg); } }
 
 .lightbox-close{
-  position:absolute; top: 1.2rem; right: 1.2rem;
+  position:absolute; top: .8rem; right: .8rem;
   background: rgba(251,243,231,.12);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(251,243,231,.15);
-  width: 44px; height:44px;
+  width: 40px; height:40px;
   border-radius:50%;
   font-size: 1.3rem;
   cursor:pointer;
@@ -701,7 +704,7 @@ body.nav-open{ overflow:hidden; }
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(251,243,231,.12);
-  width: 48px; height:48px;
+  width: 40px; height:40px;
   border-radius:50%;
   cursor:pointer;
   color: var(--crema-alta);
@@ -709,8 +712,8 @@ body.nav-open{ overflow:hidden; }
   transition: background .2s, transform .15s, opacity .2s;
   z-index: 10;
 }
-.lightbox-prev{ left: 1.2rem; }
-.lightbox-next{ right: 1.2rem; }
+.lightbox-prev{ left: .6rem; }
+.lightbox-next{ right: .6rem; }
 .lightbox-prev:hover, .lightbox-next:hover{ background: rgba(251,243,231,.2); transform: translateY(-50%) scale(1.08); }
 .lightbox-prev:active, .lightbox-next:active{ transform: translateY(-50%) scale(0.95); }
 
@@ -727,19 +730,19 @@ body.nav-open{ overflow:hidden; }
 
 .lightbox-counter{
   position:absolute;
-  top: 1.6rem; left: 1.4rem;
+  top: 1rem; left: 1rem;
   color: rgba(251,243,231,.6);
   font-family: var(--f-mono);
   font-size: .78rem;
   z-index: 10;
 }
 
-@media (max-width: 600px){
-  .lightbox-prev, .lightbox-next{ width:40px; height:40px; }
-  .lightbox-prev{ left: .6rem; }
-  .lightbox-next{ right: .6rem; }
-  .lightbox-close{ top: .8rem; right: .8rem; }
-  .lightbox-counter{ top: 1rem; left: 1rem; }
+@media (min-width: 601px){
+  .lightbox-prev, .lightbox-next{ width:48px; height:48px; }
+  .lightbox-prev{ left: 1.2rem; }
+  .lightbox-next{ right: 1.2rem; }
+  .lightbox-close{ top: 1.2rem; right: 1.2rem; }
+  .lightbox-counter{ top: 1.6rem; left: 1.4rem; }
 }
 
 /* =========================================================
@@ -877,3 +880,16 @@ body.nav-open{ overflow:hidden; }
 /* Utilidad de columnas responsivas para grillas de tarjetas */
 .grid-2{ display:grid; gap: 1.4rem; }
 @media (min-width: 700px){ .grid-2{ grid-template-columns: 1fr 1fr; } }
+
+/* =========================================================
+   Mobile-specific enhancements
+   ========================================================= */
+@media (max-width: 480px){
+  .hero-meta{ gap: 1.2rem; }
+  .hero-meta div strong{ font-size: var(--step-0); }
+  .about-stats{ gap: 1.4rem; }
+  .gallery-grid{ grid-auto-rows: 150px; }
+  .contact-card{ padding: 1.4rem; }
+  .map-cta{ flex-direction:column; align-items:flex-start; }
+  .footer-bottom{ flex-direction:column; gap:.5rem; }
+}
