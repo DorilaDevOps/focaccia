@@ -1,5 +1,5 @@
 /* =========================================================
-   FOCACCIA — bar de pizzas
+   v1.2 — FOCACCIA — bar de pizzas
    Design tokens
    ========================================================= */
 :root{
@@ -15,6 +15,10 @@
   --rojo-oscuro:  #7E2515;
   --oro-masa:     #C08B2E;   /* dorado trigo — acento de precios */
   --linea:        rgba(43,29,20,.14);
+  --rojo-claro:   #D45A3E;   /* rojo claro, variante de --rojo-italia */
+  --marron-medio: #8B6B4A;   /* marrón medio tierra */
+  --crema-78:     rgba(241,228,208,.88); /* crema al 88% opacidad */
+  --texto-sub:    rgba(251,243,231,.82); /* texto claro sobre fondos oscuros */
 
   /* Tipografía */
   --f-display: "Fraunces", "Iowan Old Style", serif;
@@ -139,7 +143,7 @@ button{ font-family: inherit; }
   position: sticky;
   top:0;
   z-index: 100;
-  background: rgba(241,228,208,.88);
+  background: var(--crema-78);
   backdrop-filter: blur(10px) saturate(1.1);
   -webkit-backdrop-filter: blur(10px) saturate(1.1);
   border-bottom: 1px solid var(--linea);
@@ -203,7 +207,7 @@ button{ font-family: inherit; }
 .primary-nav{
   position: fixed;
   inset: 0 0 0 30%;
-  background: linear-gradient(135deg, #2B1D14 0%, #3D2A1E 50%, #2B1D14 100%);
+  background: linear-gradient(135deg, var(--espresso) 0%, #3D2A1E 50%, var(--espresso) 100%);
   color: var(--crema-alta);
   display:flex;
   flex-direction:column;
@@ -413,13 +417,12 @@ body.nav-open{ overflow:hidden; }
 .section-title em{ font-style:italic; color: var(--verde-italia); }
 .section-sub{
   margin-top: .8rem;
-  color: rgba(43,29,20,.82);
+  color: var(--texto-sub);
   font-size: var(--step-0);
   max-width: 56ch;
 }
 .section.on-espresso{ background: var(--espresso); color: var(--crema-alta); }
-.section.on-espresso .section-sub{ color: rgba(251,243,231,.82); }
-.section.on-espresso .menu-item-desc{ color: rgba(251,243,231,.82); }
+.section.on-espresso .menu-item-desc{ color: var(--texto-sub); }
 .section.on-espresso .menu-group-title{ color: #D4835E; }
 .section.on-verde{ background: var(--verde-oscuro); color: var(--crema-alta); }
 .section.on-verde .eyebrow-oro{ color: #DEB06A; }
@@ -760,7 +763,7 @@ body.nav-open{ overflow:hidden; }
   gap: 2.4rem;
 }
 @media (min-width: 900px){
-  .drinks-band{ grid-template-columns: .9fr 1.1fr; align-items:center; gap:5vw; }
+  .drinks-band{ align-items:center; gap:5vw; }
 }
 .drinks-band img{
   border-radius: var(--radius-l);
