@@ -56,7 +56,7 @@
    Reset base
    ========================================================= */
 *,*::before,*::after{ box-sizing: border-box; }
-html{ scroll-behavior: smooth; }
+html{ scroll-behavior: smooth; overflow-x: hidden; }
 body{
   margin:0;
   background: var(--crema);
@@ -143,7 +143,7 @@ button{ font-family: inherit; }
 .site-header{
   position: sticky;
   top:0;
-  z-index: 100;
+  z-index: 105;
   background: var(--crema-78);
   backdrop-filter: blur(10px) saturate(1.1);
   -webkit-backdrop-filter: blur(10px) saturate(1.1);
@@ -212,13 +212,13 @@ button{ font-family: inherit; }
   display:flex;
   flex-direction:column;
   padding: 5rem var(--gutter) 2rem;
-  transform: translateX(100%);
-  transition: transform var(--dur-2) var(--ease), background var(--dur-2) var(--ease);
+  clip-path: inset(0 0 0 100%);
+  transition: clip-path var(--dur-2) var(--ease), background var(--dur-2) var(--ease);
   visibility: hidden;
   z-index: 105;
 }
 .primary-nav.is-open{
-  transform: translateX(0);
+  clip-path: inset(0 0 0 0);
   visibility: visible;
   background-color: var(--verde-claro);
 }
@@ -545,7 +545,7 @@ body.nav-open{ overflow:hidden; }
 
 .menu-panel{ display:none; opacity:0; transform: translateY(6px); }
 .menu-panel.is-active{ display:block; animation: panelIn .25s var(--ease) forwards; }
-.menu-panel.search-visible{ display:block; }
+.menu-panel.search-visible{ display:block; opacity:1; transform:none; }
 @keyframes panelIn{ from{ opacity:0; transform: translateY(6px); } to{ opacity:1; transform: none; } }
 
 .menu-group + .menu-group{ margin-top: 1.8rem; }
@@ -897,7 +897,7 @@ body.nav-open{ overflow:hidden; }
   position: fixed;
   right: calc(1.1rem + env(safe-area-inset-right, 0px));
   bottom: calc(1.1rem + env(safe-area-inset-bottom, 0px));
-  z-index: 90;
+  z-index: 110;
   background: var(--verde-italia);
   color: var(--crema-alta);
   width: 56px; height:56px;
