@@ -364,12 +364,16 @@
       const q = menuSearch.value.trim().toLowerCase();
       if (!q) {
         menuPanels.forEach(p => {
+          p.classList.remove('search-visible');
           p.hidden = !p.classList.contains('is-active');
         });
         document.querySelectorAll('.menu-item').forEach(item => item.style.display = '');
         return;
       }
-      menuPanels.forEach(p => p.hidden = false);
+      menuPanels.forEach(p => {
+        p.hidden = false;
+        p.classList.add('search-visible');
+      });
       document.querySelectorAll('.menu-item').forEach(item => {
         const name = (item.querySelector('.menu-item-name')?.textContent || '').toLowerCase();
         const desc = (item.querySelector('.menu-item-desc')?.textContent || '').toLowerCase();
@@ -378,7 +382,10 @@
     });
 
     menuTabsAll.forEach(tab => {
-      tab.addEventListener('click', () => { menuSearch.value = ''; });
+      tab.addEventListener('click', () => {
+        menuSearch.value = '';
+        menuSearch.dispatchEvent(new Event('input'));
+      });
     });
   }
 

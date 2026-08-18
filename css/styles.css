@@ -545,6 +545,7 @@ body.nav-open{ overflow:hidden; }
 
 .menu-panel{ display:none; opacity:0; transform: translateY(6px); }
 .menu-panel.is-active{ display:block; animation: panelIn .25s var(--ease) forwards; }
+.menu-panel.search-visible{ display:block; }
 @keyframes panelIn{ from{ opacity:0; transform: translateY(6px); } to{ opacity:1; transform: none; } }
 
 .menu-group + .menu-group{ margin-top: 1.8rem; }
