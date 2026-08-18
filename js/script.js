@@ -120,6 +120,11 @@
           const src = img.dataset.src;
           if (src) {
             img.src = src;
+            const picture = img.closest('picture');
+            if (picture) {
+              const source = picture.querySelector('source[data-srcset]');
+              if (source) source.srcset = source.dataset.srcset;
+            }
             img.removeAttribute('data-src');
             img.onload = () => img.classList.add('is-loaded');
             img.onerror = () => {
