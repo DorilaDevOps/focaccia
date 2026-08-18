@@ -21,12 +21,14 @@
   const closeNav = () => {
     navToggle.setAttribute('aria-expanded', 'false');
     primaryNav.classList.remove('is-open');
+    primaryNav.inert = true;
     navScrim.classList.remove('is-open');
     document.body.classList.remove('nav-open');
   };
   const openNav = () => {
     navToggle.setAttribute('aria-expanded', 'true');
     primaryNav.classList.add('is-open');
+    primaryNav.inert = false;
     navScrim.classList.add('is-open');
     document.body.classList.add('nav-open');
   };
@@ -40,6 +42,7 @@
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeNav();
   });
+  primaryNav.inert = true;
 
   /* ---------- Tabs del menú (accesibles, patrón WAI-ARIA) ---------- */
   const tabs = Array.from(document.querySelectorAll('#menuTabs [role="tab"]'));
@@ -52,7 +55,17 @@
     menuTabsContainer.classList.toggle('has-overflow', hasOverflow);
   }
   checkTabsOverflow();
+  document.fonts.ready.then(checkTabsOverflow);
   window.addEventListener('resize', checkTabsOverflow, { passive: true });
+  menuTabsContainer.addEventListener('scroll', () => {
+    const scrolledToEnd =
+      menuTabsContainer.scrollLeft + menuTabsContainer.clientWidth >= menuTabsContainer.scrollWidth - 4;
+    if (scrolledToEnd) {
+      menuTabsContainer.classList.remove('has-overflow');
+    } else if (menuTabsContainer.scrollWidth > menuTabsContainer.clientWidth + 2) {
+      menuTabsContainer.classList.add('has-overflow');
+    }
+  }, { passive: true });
 
   function activateTab(tab) {
     tabs.forEach(t => {
@@ -312,5 +325,75 @@
       });
     }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
     revealEls.forEach(el => io.observe(el));
+  }
+
+  /* ---------- Toast de feedback ---------- */
+  const toast = document.getElementById('toast');
+  let toastTimer;
+  function showToast(msg, duration = 2000) {
+    if (!toast) return;
+    clearTimeout(toastTimer);
+    toast.textContent = msg;
+    toast.classList.add('is-visible');
+    toastTimer = setTimeout(() => toast.classList.remove('is-visible'), duration);
+  }
+
+  /* ---------- Copiar teléfono al clickear tel: links ---------- */
+  document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const number = link.href.replace('tel:', '');
+      navigator.clipboard.writeText(number).then(() => {
+        showToast('Número copiado al portapapeles');
+      }).catch(() => {
+        showToast('Número: ' + number);
+      });
+    });
+  });
+
+  /* ---------- Buscador del menú ---------- */
+  const menuSearch = document.getElementById('menuSearch');
+  const menuPanels = document.querySelectorAll('.menu-panel');
+  const menuTabsAll = document.querySelectorAll('.menu-tab');
+
+  if (menuSearch) {
+    menuSearch.addEventListener('input', () => {
+      const q = menuSearch.value.trim().toLowerCase();
+      if (!q) {
+        menuPanels.forEach(p => {
+          p.hidden = !p.classList.contains('is-active');
+        });
+        document.querySelectorAll('.menu-item').forEach(item => item.style.display = '');
+        return;
+      }
+      menuPanels.forEach(p => p.hidden = false);
+      document.querySelectorAll('.menu-item').forEach(item => {
+        const name = (item.querySelector('.menu-item-name')?.textContent || '').toLowerCase();
+        const desc = (item.querySelector('.menu-item-desc')?.textContent || '').toLowerCase();
+        item.style.display = (name.includes(q) || desc.includes(q)) ? '' : 'none';
+      });
+    });
+
+    menuTabsAll.forEach(tab => {
+      tab.addEventListener('click', () => { menuSearch.value = ''; });
+    });
+  }
+
+  /* ---------- Scroll-spy: enlace activo según sección visible ---------- */
+  const sections = document.querySelectorAll('main section[id]');
+  const navLinks = document.querySelectorAll('.primary-nav a[href^="#"]');
+
+  if ('IntersectionObserver' in window) {
+    const spyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(s => spyObserver.observe(s));
   }
 })();
