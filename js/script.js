@@ -339,8 +339,11 @@
   }
 
   /* ---------- Copiar teléfono al clickear tel: links ---------- */
+  const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+
   document.querySelectorAll('a[href^="tel:"]').forEach(link => {
     link.addEventListener('click', (e) => {
+      if (isTouchDevice) return;
       e.preventDefault();
       const number = link.href.replace('tel:', '');
       navigator.clipboard.writeText(number).then(() => {
