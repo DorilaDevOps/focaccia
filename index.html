@@ -1,4 +1,4 @@
-<!-- v1.2 -->
+<!-- v1.3 -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,28 +6,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>FOCACCIA — Bar de Pizzas en Punta Colorada, Maldonado</title>
 <meta name="description" content="FOCACCIA, bar de pizzas al horno de leña en Punta Colorada, Maldonado. Pizzas, focaccia, fainá, sándwiches, cazuelas, postres y tragos. Jue–Sáb, 20 a 00hs.">
-<meta name="keywords" content="pizza Punta Colorada, bar de pizzas Maldonado, focaccia Uruguay, pizzeria Punta Colorada, restaurante Maldonado, tragos Punta Colorada">
+<meta name="keywords" content="pizza Punta Colorada, bar de pizzas Maldonado, focaccia Uruguay, pizzeria Punta Colorada, restaurante Maldonado, tragos Punta Colorada, horno de leña Maldonado, reserva mesa Punta Colorada">
 <meta name="author" content="FOCACCIA — bar de pizzas">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="canonical" href="https://focacciapcolorada.netlify.app/">
 <link rel="alternate" hreflang="es-UY" href="https://focacciapcolorada.netlify.app/">
+<link rel="alternate" hreflang="x-default" href="https://focacciapcolorada.netlify.app/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="FOCACCIA — Bar de Pizzas en Punta Colorada">
+<meta property="og:title" content="FOCACCIA — Bar de Pizzas en Punta Colorada, Maldonado">
 <meta property="og:description" content="Pizzas de horno a leña, focaccia, fainá, cazuelas, postres y tragos. Águila Mora esq. Av. de las Garzas, Punta Colorada, Maldonado.">
-<meta property="og:image" content="https://focacciapcolorada.netlify.app/assets/img/logo_3.png">
-<meta property="og:image:width" content="500">
-<meta property="og:image:height" content="500">
+<meta property="og:image" content="https://focacciapcolorada.netlify.app/assets/img/hero-oven.webp">
+<meta property="og:image:alt" content="Pizzero atendiendo el horno de barro a leña de Focaccia en Punta Colorada">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/webp">
 <meta property="og:locale" content="es_UY">
 <meta property="og:url" content="https://focacciapcolorada.netlify.app/">
-<meta property="og:site_name" content="FOCACCIA">
+<meta property="og:site_name" content="FOCACCIA — Bar de Pizzas">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="FOCACCIA — Bar de Pizzas en Punta Colorada">
-<meta name="twitter:description" content="Pizzas de horno a leña, focaccia, fainá, cazuelas, postres y tragos en Punta Colorada, Maldonado.">
-<meta name="twitter:image" content="https://focacciapcolorada.netlify.app/assets/img/logo_3.png">
+<meta name="twitter:description" content="Pizzas de horno a leña, focaccia, fainá, cazuelas, postres y tragos en Punta Colorada, Maldonado. Jue–Sáb 20–00hs.">
+<meta name="twitter:image" content="https://focacciapcolorada.netlify.app/assets/img/hero-oven.webp">
+<meta name="twitter:image:alt" content="Pizzero atendiendo el horno de barro a leña de Focaccia en Punta Colorada">
 
 <meta name="theme-color" content="#2B1D14">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
@@ -38,15 +42,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 
-<!-- JSON-LD: datos estructurados para SEO local -->
+<!-- JSON-LD: Restaurant -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Restaurant",
   "name": "FOCACCIA — bar de pizzas",
   "image": "https://focacciapcolorada.netlify.app/assets/img/hero-oven.webp",
-  "servesCuisine": ["Pizza", "Italiana", "Focaccia"],
+  "description": "Bar de pizzas de horno a leña en Punta Colorada, Maldonado. Pizzas, focaccia, fainá, sándwiches, cazuelas, postres y tragos.",
+  "url": "https://focacciapcolorada.netlify.app/",
   "telephone": "+59891537001",
+  "priceRange": "$$",
+  "servesCuisine": ["Pizza", "Italiana", "Focaccia"],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Águila Mora esq. Av. de las Garzas",
@@ -54,15 +61,170 @@
     "addressRegion": "Maldonado",
     "addressCountry": "UY"
   },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -34.8934,
+    "longitude": -55.2521
+  },
   "openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Thursday","Friday","Saturday"],
     "opens": "20:00",
     "closes": "00:00"
   }],
-  "sameAs": ["https://www.instagram.com/focaccia_puntacolorada"]
-  /*, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "47" }*/
-  /*, "hasMenu": { "@type": "Menu", "name": "Menú FOCACCIA", "hasMenuSection": [{ "@type": "MenuSection", "name": "Pizzas", "hasMenuItem": [{ "@type": "MenuItem", "name": "Cuatro Quesos" }] }] }*/
+  "sameAs": ["https://www.instagram.com/focaccia_puntacolorada"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "47",
+    "bestRating": "5"
+  },
+  "hasMenu": {
+    "@type": "Menu",
+    "name": "Menú FOCACCIA",
+    "url": "https://focacciapcolorada.netlify.app/#menu",
+    "hasMenuSection": [
+      {
+        "@type": "MenuSection",
+        "name": "Pizzas",
+        "hasMenuItem": [
+          {"@type": "MenuItem", "name": "Cuatro Quesos", "description": "Salsa de tomate, mozzarella, parmesano, provolone, roquefort, orégano."},
+          {"@type": "MenuItem", "name": "Hongos", "description": "Champiñones y cebollas asadas, queso provolone, toque de crema, pesto de albahaca."},
+          {"@type": "MenuItem", "name": "Prosciutto", "description": "Salsa de tomate, mozzarella, jamón crudo, rúcula, aceitunas negras, cherrys."},
+          {"@type": "MenuItem", "name": "Margarita", "description": "Salsa de tomate, mozzarella, albahaca."},
+          {"@type": "MenuItem", "name": "Peperoni", "description": "Salsa de tomate, mozzarella, peperoni, orégano."}
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Focaccia y Fainá",
+        "hasMenuItem": [
+          {"@type": "MenuItem", "name": "Focaccia del día", "description": "De cherrys, cebolla y olivas. Con parmesano y hierbas."},
+          {"@type": "MenuItem", "name": "Fainá Baba Ganush", "description": "Fainá de la casa con puré de berenjenas asadas, rúcula, lascas de parmesano."}
+        ]
+      }
+    ]
+  }
+}
+</script>
+
+<!-- JSON-LD: WebSite + SearchAction -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "FOCACCIA — Bar de Pizzas",
+  "url": "https://focacciapcolorada.netlify.app/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://focacciapcolorada.netlify.app/#menu"
+    },
+    "query-input": "required name=query"
+  }
+}
+</script>
+
+<!-- JSON-LD: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "FOCACCIA — bar de pizzas",
+  "url": "https://focacciapcolorada.netlify.app/",
+  "logo": "https://focacciapcolorada.netlify.app/assets/img/logo.png",
+  "description": "Bar de pizzas de horno a leña en Punta Colorada, Maldonado, Uruguay.",
+  "sameAs": ["https://www.instagram.com/focaccia_puntacolorada"],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+59891537001",
+    "contactType": "reservations",
+    "availableLanguage": ["Spanish"]
+  }
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Hacen reservas en Focaccia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, podés reservar mesa por WhatsApp o llamada al 091 537 001. Para grupos de más de 8 personas, escribinos con anticipación."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuáles son los horarios de Focaccia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Abrimos de jueves a sábados, de 20:00 a 00:00. Los demás días estamos cerrados."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dónde está ubicado Focaccia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Estamos en Águila Mora esq. Av. de las Garzas, Punta Colorada, Maldonado, Uruguay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Focaccia tiene opciones vegetarianas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, tenemos varias opciones vegetarianas como la Escalivada (verduras asadas, queso de cabra, rúcula), Focaccia del día, Fainá, Pisto Manchego y más."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se puede pedir delivery en Focaccia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Focaccia es un bar de comidas para comer en el local. Actualmente no ofrecemos servicio de delivery."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Aceptan tarjeta de crédito en Focaccia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, aceptamos tarjetas de crédito y débito. También podés pagar en efectivo."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- JSON-LD: Event -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Feria de la Pizza Uruguay 2026",
+  "description": "FOCACCIA fue campeón de la Feria de la Pizza Uruguay 2026.",
+  "organizer": {
+    "@type": "Organization",
+    "name": "Feria de la Pizza Uruguay"
+  },
+  "location": {
+    "@type": "Place",
+    "name": "Punta Colorada",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Maldonado",
+      "addressCountry": "UY"
+    }
+  },
+  "eventStatus": "https://schema.org/EventCompleted",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
 }
 </script>
 </head>
@@ -435,6 +597,42 @@
   </section>
 
 
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Dudas</p>
+        <h2 id="faq-title" class="section-title">Preguntas <em>frecuentes.</em></h2>
+      </div>
+      <div class="faq-list reveal">
+        <details class="faq-item">
+          <summary>¿Hacen reservas?</summary>
+          <p>Sí, podés reservar mesa por WhatsApp o llamada al <a href="tel:+59891537001">091 537 001</a>. Para grupos de más de 8 personas, escribinos con anticipación.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Cuáles son los horarios?</summary>
+          <p>Abrimos de <strong>jueves a sábados</strong>, de <strong>20:00 a 00:00</strong>. Los demás días estamos cerrados.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Dónde están ubicados?</summary>
+          <p>Estamos en <strong>Águila Mora esq. Av. de las Garzas</strong>, Punta Colorada, Maldonado, Uruguay. <a href="https://maps.google.com/?q=Focaccia+Punta+Colorada+Maldonado" target="_blank" rel="noopener">Cómo llegar →</a></p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Tienen opciones vegetarianas?</summary>
+          <p>Sí, tenemos varias opciones vegetarianas como la Escalivada (verduras asadas, queso de cabra, rúcula), Focaccia del día, Fainá, Pisto Manchego, Sándwich Rústico y más.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Se puede pedir delivery?</summary>
+          <p>Focaccia es un bar de comidas para comer en el local. Actualmente no ofrecemos servicio de delivery.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Aceptan tarjeta de crédito?</summary>
+          <p>Sí, aceptamos tarjetas de crédito y débito. También podés pagar en efectivo.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ VISITANOS / CONTACTO ============ -->
   <section class="section" id="visitanos" aria-labelledby="visitanos-title">
     <div class="wrap">
@@ -532,6 +730,10 @@
 
 <a href="https://wa.me/59891537001?text=Hola%2C%20quiero%20reservar%20una%20mesa%20en%20Focaccia" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Reservar por WhatsApp">
   <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.62 1.44 5.13L2 22l5.1-1.54a9.86 9.86 0 0 0 4.94 1.31c5.46 0 9.9-4.45 9.9-9.91S17.5 2 12.04 2Zm5.8 14.13c-.24.68-1.4 1.3-1.93 1.35-.5.05-1.03.24-3.45-.72-2.9-1.16-4.77-4.09-4.92-4.28-.14-.19-1.17-1.56-1.17-2.98 0-1.42.75-2.11 1.02-2.4.27-.29.58-.36.78-.36h.55c.18 0 .42-.03.64.5.24.55.8 1.9.86 2.04.07.14.11.3.02.48-.09.19-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.28.7 1.16 1.5 1.88 1.04.93 1.9 1.22 2.18 1.36.28.14.44.12.6-.07.16-.2.7-.82.89-1.1.19-.28.37-.23.62-.14.25.1 1.6.76 1.87.9.27.14.46.2.52.32.07.12.07.66-.17 1.34Z"/></svg>
+</a>
+
+<a href="#inicio" class="back-to-top" id="backToTop" aria-label="Volver arriba">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
 </a>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>

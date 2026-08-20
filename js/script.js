@@ -411,4 +411,18 @@
     }, { rootMargin: '-40% 0px -55% 0px' });
     sections.forEach(s => spyObserver.observe(s));
   }
+
+  /* ---------- Back to top ---------- */
+  const backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    const toggleBackToTop = () => {
+      backToTop.classList.toggle('is-visible', window.scrollY > 500);
+    };
+    toggleBackToTop();
+    window.addEventListener('scroll', toggleBackToTop, { passive: true });
+    backToTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 })();
